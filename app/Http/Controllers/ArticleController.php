@@ -19,6 +19,7 @@ class ArticleController extends Controller
     public function store(Request $request) {
         //dd($request->all());
         $data = $request->all();
+        $data['slug'] = strtolower(str_replace(" ","-",$data['title']));
         $data['created_at'] =new \DateTime();
         $data['updated_at'] =new \DateTime();
         unset($data["_token"]);

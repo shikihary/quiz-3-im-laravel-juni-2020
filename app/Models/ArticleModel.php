@@ -29,7 +29,7 @@ class ArticleModel {
                         ->update([
                             'title' => $request["title"],
                             'content' => $request["content"],
-                            //'slug' => $request["slug"],
+                            'slug' => strtolower(str_replace(" ","-",$request['title'])),
                             'tag' => $request["tag"],
                             'updated_at' => $update,
                         ]);
