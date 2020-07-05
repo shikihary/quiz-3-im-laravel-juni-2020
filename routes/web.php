@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
-Route::post('/items', 'ItemController@store'); // menyimpan data
-Route::get('/items', 'ItemController@index'); // menampilkan semua
-Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item dengan id 
-Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
-Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
-Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+Route::get('/articles/create', 'ArticleController@create'); // menampilkan halaman form
+Route::post('/articles', 'ArticleController@store'); // menyimpan data
+Route::get('/articles', 'ArticleController@index'); // menampilkan semua
+Route::get('/articles/{id}', 'ArticleController@show'); // menampilkan detail Article dengan id 
+Route::get('/articles/{id}/edit', 'ArticleController@edit'); // menampilkan form untuk edit Article
+Route::put('/articles/{id}', 'ArticleController@update'); // menyimpan perubahan dari form edit
+Route::delete('/articles/{id}', 'ArticleController@destroy'); // menghapus data dengan id
